@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <h2>Uploaded Image:</h2>
+    <img src="{{ image_path }}" alt="Uploaded Image">
+
+    <h2>Prediction:</h2>
+    <p>{{ prediction }}</p>
+
+    <h2>Grad-CAM Explanation:</h2>
+    <img src="{{ explanation_path }}" alt="Grad-CAM Explanation">
+
+    <h2>Solutions:</h2>
+    <ul>
+        {% for solution in solutions %}
+            <li>{{ solution }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
