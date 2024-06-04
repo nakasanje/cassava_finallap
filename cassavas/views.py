@@ -140,11 +140,11 @@ def predict(request):
 
     else:
         form = CassavaImageForm()
-    return render(request, 'cassavas/upload.html', {'form': form})
+    return render(request, 'cassavas/index.html', {'form': form})
 
 def upload_image(request):
     if request.method == 'POST':
         uploaded_image = request.FILES['image']
         return render(request, 'cassavas/upload_success.html', {'uploaded_image': uploaded_image})
     else:
-        return render(request, 'cassavas/upload.html')
+        return render(request, 'cassavas/index.html')
